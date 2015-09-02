@@ -1,4 +1,6 @@
 plot3 <- function(){
+  # set locale to en_US so that we get English weekday abbreviations 
+  Sys.setlocale("LC_TIME", "en_US")
   
   # file "household_power_consumption.txt" precomputed to only contain values of 1st and 2nd of February 2007
   data  <- read.table("household_power_consumption.txt", na.strings = "?", nrows = 2100000, sep = ";", header = TRUE)
